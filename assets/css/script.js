@@ -250,8 +250,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const formData = new FormData(form);
 
-      // 
-      showContactSuccess('Thank you for contacting us! We will get back to you soon.');
+      fetch('./contact-form-handler.php', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Accept': 'application/json',
+        }
+      })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text().then(text => {
+            try {
+              return JSON.parse(text);
+            } catch (e) {
+              console.error('Invalid JSON response:', text);
+              throw new Error('Server returned invalid response');
+            }
+          });
+        })
+        .then(data => {
+          if (data.success) {
+            showContactSuccess(data.message);
+          } else {
+            showContactError(data.message || 'Error submitting form.');
+          }
+        })
+        .catch(error => {
+          console.error('Form submission error:', error);
+          showContactError('Error submitting form. Please try again later.');
+        })
+        .finally(() => {
+          // Reset button state
+          setButtonLoading(submitButton, false);
+        });
     });
   }
 
