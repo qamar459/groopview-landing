@@ -78,7 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   const form = document.getElementById('contact-form');
-  const messageContainer = document.getElementById('message');
 
   // Create toast container
   const toastContainer = document.createElement('div');
@@ -129,7 +128,19 @@ document.addEventListener("DOMContentLoaded", function () {
           'Accept': 'application/json',
         }
       })
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text().then(text => {
+            try {
+              return JSON.parse(text);
+            } catch (e) {
+              console.error('Invalid JSON response:', text);
+              throw new Error('Server returned invalid response');
+            }
+          });
+        })
         .then(data => {
           if (data.success) {
             showToast(data.message, 'success');
@@ -139,7 +150,8 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         })
         .catch(error => {
-          showToast(error.message, 'error');
+          console.error('Form submission error:', error);
+          showToast('Error submitting form. Please try again later.', 'error');
         });
     });
   }
@@ -174,7 +186,19 @@ document.addEventListener("DOMContentLoaded", function () {
           'Accept': 'application/json',
         }
       })
-        .then(response => response.json())
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text().then(text => {
+            try {
+              return JSON.parse(text);
+            } catch (e) {
+              console.error('Invalid JSON response:', text);
+              throw new Error('Server returned invalid response');
+            }
+          });
+        })
         .then(data => {
           if (data.success) {
             showToast(data.message || 'Thank you for subscribing!', 'success');
@@ -184,7 +208,8 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         })
         .catch(error => {
-          showToast('Error subscribing. Please try again.', 'error');
+          console.error('Subscribe error:', error);
+          showToast('Error subscribing. Please try again later.', 'error');
         });
       
     });
