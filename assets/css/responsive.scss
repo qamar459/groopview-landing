@@ -190,6 +190,11 @@
 
 @media screen and (max-width: 768px) {
 
+    .px-50 {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
     .mega-menu .dropdown-menu .accordion {
         padding-right: 10px;
     }
@@ -454,7 +459,8 @@
     }
 
     .blog-detail-section .blog-content ul {
-     margin-bottom: 35px;
+        margin-bottom: 35px;
+
         li p {
             margin-bottom: 15px;
         }

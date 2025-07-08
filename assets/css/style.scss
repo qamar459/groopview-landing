@@ -249,8 +249,7 @@ html {
 
 .hero-section {
     width: 100%;
-    min-height: 922px;
-    padding: 220px 0px 60px;
+    padding: 220px 0px 100px;
     background: radial-gradient(69.48% 69.48% at 49.72% 37.74%, #2560B5 0%, #102A4F 100%);
 
     .hero-body {
@@ -346,7 +345,7 @@ html {
             font-weight: 500;
             font-size: 20px;
             color: #FFFFFF;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
 
             .b-1 {
                 position: absolute;
@@ -367,7 +366,8 @@ html {
             align-items: center;
 
             .logo {
-                height: 23px;
+                height: 25px;
+                width: auto;
             }
         }
     }
@@ -635,6 +635,8 @@ html {
     padding: 100px 0px;
 
     .news-card {
+        max-width: 420px;
+        margin: auto;
         width: 100%;
         height: 358px;
         border-radius: 15px;
@@ -652,7 +654,7 @@ html {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 25px;
+            padding: 25px 30px;
 
             .heading {
                 display: flex;
@@ -684,6 +686,15 @@ html {
                 line-height: 14px;
                 color: #FFFFFF;
                 margin-bottom: 0px;
+            }
+        }
+    }
+
+    .news-card:hover {
+        .heading {
+
+            i {
+                margin-right: -5px;
             }
         }
     }
@@ -837,7 +848,8 @@ html {
                 color: #000000;
             }
         }
-        form{
+
+        form {
             width: 100%;
             display: flex;
             justify-content: flex-end;
@@ -1303,9 +1315,14 @@ html {
         right: 10px;
         left: 10px;
     }
-    
+
     .toast {
         min-width: auto;
         max-width: none;
     }
+}
+
+.px-50 {
+    padding-left: 50px;
+    padding-right: 50px;
 }
