@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <!-- bootstrap 5-->
+
+    <!-- aos animation -->
+    <script src="assets/css/aos.js"></script>
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <!-- aos animation -->
+
+    <!-- css -->
+    <link href="assets/css/hover.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/responsive.css" rel="stylesheet">
+    <!-- css -->
+
+    <link href="assets/images/fav.png" rel="icon" type="image/x-icon">
+    <title>Groopview</title>
+
+</head>
+
+<body>
+
+    <div class="layout">
+        <!-- Hero -->
+        <div class="hero-section">
+            <div class="header-row" id="header">
+                <div class="lg-container">
+                    <div class="header">
+                        <nav class="navbar navbar-expand-lg">
+                            <div class="container-fluid">
+                                <a class="navbar-brand" href="#">
+                                    <img src="assets/images/logo.svg" class="logo" alt="">
+                                </a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <i class="fa-solid fa-bars"></i>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#about">About Us </a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Products
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#dualy" id="dualyLink">Dualy</a></li>
+                                                <li><a class="dropdown-item" href="#swis" id="swisLink">Swis</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown mega-menu">
+                                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                Patents
+                                            </a>
+                                            <ul class="dropdown-menu" data-bs-auto-close="outside">
+                                                <div class="accordion" id="myAccordion" data-aos="fade-up"
+                                                    data-aos-offset="200" data-aos-delay="200">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button
+                                                                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse1" aria-expanded="false">
+                                                                1- Integrated system and method for executing a communal
+                                                                media system in a streaming application
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse1" class="accordion-collapse collapse"
+                                                            data-bs-parent="#myAccordion">
+                                                            <div class="accordion-body">
+                                                                A method for delivering multimedia content during a
+                                                                communal session at a media system
+                                                                commutatively coupled with a streaming application. The
+                                                                method includes receiving a
+                                                                request to initiate the communal session; retrieving
+                                                                contact information for user
+                                                                devices
+                                                                selected to participate in the communal session;
+                                                                retrieving an address for each of the
+                                                                user
+                                                                devices; receiving a source location for multimedia
+                                                                content selected in the streaming
+                                                                application; and sharing the source location with a
+                                                                player that is configured to
+                                                                transmit the
+                                                                multimedia content to each of the user devices. The
+                                                                method also includes, at an
+                                                                appointed
+                                                                time, initiating video playback for each of the user
+                                                                devices, synchronizing delivery of
+                                                                the
+                                                                multimedia content and social media content generated on
+                                                                each of the user devices, and
+                                                                exchanging playback control messages with the streaming
+                                                                application to direct the
+                                                                synchronized transmissions of the multimedia content and
+                                                                social media content to each of
+                                                                the user devices.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button
+                                                                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse2" aria-expanded="false">
+                                                                2- Integrated system and method for executing a communal
+                                                                media session with dual-view sharing
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse2" class="accordion-collapse collapse"
+                                                            data-bs-parent="#myAccordion">
+                                                            <div class="accordion-body">
+                                                                A method for delivering multimedia content during a
+                                                                communal session at a media system
+                                                                commutatively coupled with a streaming application. The
+                                                                method includes authenticating
+                                                                access to multimedia content for user devices
+                                                                participating in a communal session,
+                                                                receiving a first recording from a first user device,
+                                                                the first recording being
+                                                                generated from
+                                                                a first set of cameras of the first user device,
+                                                                receiving social media content
+                                                                generated the
+                                                                user devices, the social media content including a
+                                                                second recording generated
+                                                                simultaneously with the first recording on the first
+                                                                user device, the second recording
+                                                                being
+                                                                generated from a second set of cameras of the first user
+                                                                device, and synchronizing
+                                                                delivery
+                                                                of the first recording and the social media content by
+                                                                exchanging playback control
+                                                                messages with the streaming application to direct
+                                                                synchronized transmissions of the
+                                                                first
+                                                                recording and the social media content to the user
+                                                                devices.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button
+                                                                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse3" aria-expanded="false">
+                                                                3- Communal social media system and method
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse3" class="accordion-collapse collapse"
+                                                            data-bs-parent="#myAccordion">
+                                                            <div class="accordion-body">
+                                                                A communal media system includes a content management
+                                                                system for storing multimedia
+                                                                content and a synchronization system configured to:
+                                                                retrieve the multimedia content for
+                                                                delivery to a plurality of user devices and receive
+                                                                social media content generated by
+                                                                the
+                                                                user devices; separate the multimedia content and the
+                                                                social media content into a set of
+                                                                prioritized layers; determine a timestamp offset for
+                                                                each of the user devices; and
+                                                                adjust
+                                                                simultaneous deliveries of the multimedia content and
+                                                                the social media content to the
+                                                                user
+                                                                devices, based on a priority associated each layer and
+                                                                the timestamp offset associated
+                                                                with
+                                                                each user device, The multimedia content is delivered to
+                                                                each user devices at the same
+                                                                time and the social media content is delivered to the
+                                                                user devices at the same time
+                                                                while
+                                                                the multimedia content is being viewed on the user
+                                                                devices.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button
+                                                                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse4" aria-expanded="false">
+                                                                4- Multilayer and synchronized communal social media
+                                                                system
+                                                                and method
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse4" class="accordion-collapse collapse"
+                                                            data-bs-parent="#myAccordion">
+                                                            <div class="accordion-body">
+                                                                A communal media system includes a content management
+                                                                system for storing multimedia
+                                                                content and a synchronization system configured to:
+                                                                retrieve the multimedia content for
+                                                                delivery to a plurality of user devices and receive
+                                                                social media content generated by
+                                                                the
+                                                                user devices; separate the multimedia content and the
+                                                                social media content into a set of
+                                                                prioritized layers; determine a timestamp offset for
+                                                                each of the user devices; and
+                                                                adjust
+                                                                simultaneous deliveries of the multimedia content and
+                                                                the social media content to the
+                                                                user
+                                                                devices, based on a priority associated each layer and
+                                                                the timestamp offset associated
+                                                                with
+                                                                each user device, The multimedia content is delivered to
+                                                                each user devices at the same
+                                                                time and the social media content is delivered to the
+                                                                user devices at the same time
+                                                                while
+                                                                the multimedia content is being viewed on the user
+                                                                devices.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button
+                                                                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse5" aria-expanded="false">
+                                                                5- Recording system and method of multilayer and
+                                                                synchronized communal social media content
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse5" class="accordion-collapse collapse"
+                                                            data-bs-parent="#myAccordion">
+                                                            <div class="accordion-body">
+                                                                A communal media system includes a synchronization
+                                                                system to: receive multimedia
+                                                                content for delivery to multiple user devices, a video
+                                                                recorded on one of the user
+                                                                devices,
+                                                                and social media content generated by the user devices;
+                                                                separate the multimedia content,
+                                                                the video and the social media content into a set of
+                                                                prioritized layers; and adjust
+                                                                simultaneous deliveries of the multimedia content, the
+                                                                video and the social media
+                                                                content
+                                                                to the user devices, based timestamp receipts and the
+                                                                fragment identifier
+                                                                acknowledgements received from the user devices, The
+                                                                multimedia content is delivered to
+                                                                each user devices at the same time and the social media
+                                                                content is delivered to the user
+                                                                devices at the same time while the multimedia content is
+                                                                being viewed on the user
+                                                                devices.
+                                                                A recording system records a communal session including
+                                                                the multimedia content, the
+                                                                video, and the social media content.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button
+                                                                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse6" aria-expanded="false">
+                                                                6- Integrated system and method for executing a communal
+                                                                media session across multiple platforms
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse6" class="accordion-collapse collapse"
+                                                            data-bs-parent="#myAccordion">
+                                                            <div class="accordion-body">
+                                                                A method for delivering multimedia content during a
+                                                                communal session at a media system
+                                                                commutatively coupled with a streaming application. The
+                                                                method includes receiving a
+                                                                request to initiate the communal session; retrieving
+                                                                contact information for user
+                                                                devices
+                                                                selected to participate in the communal session;
+                                                                retrieving an address for each of the
+                                                                user
+                                                                devices; receiving a source location for multimedia
+                                                                content selected in the streaming
+                                                                application; and sharing the source location with a
+                                                                player that is configured to
+                                                                transmit the
+                                                                multimedia content to each of the user devices. The
+                                                                method also includes, at an
+                                                                appointed
+                                                                time, initiating video playback for each of the user
+                                                                devices, synchronizing delivery of
+                                                                the
+                                                                multimedia content and social media content generated on
+                                                                each of the user devices, and
+                                                                exchanging playback control messages with the streaming
+                                                                application to direct the
+                                                                synchronized transmissions of the multimedia content and
+                                                                social media content to each of
+                                                                the user devices.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button
+                                                                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse7" aria-expanded="false">
+                                                                7- Multiview synchronized communal system and method
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse7" class="accordion-collapse collapse"
+                                                            data-bs-parent="#myAccordion">
+                                                            <div class="accordion-body">
+                                                                A communal media system includes a synchronization
+                                                                system to retrieve the multimedia
+                                                                content for delivery to participating user devices and
+                                                                receive a request from a user
+                                                                device
+                                                                for multimedia content being displayed on participating
+                                                                user devices. The multimedia
+                                                                content being displayed on a first participating device
+                                                                is different from the multimedia
+                                                                content being displayed on a second participating
+                                                                device. The synchronization system
+                                                                receives social media content generated by user devices,
+                                                                adjusts simultaneous deliveries
+                                                                of
+                                                                the multimedia content being displayed on the first and
+                                                                second participating user
+                                                                devices
+                                                                and the social media content to the user devices, and
+                                                                transmits, to user devices in the
+                                                                communal session, multiple screens including the
+                                                                multimedia content being displayed on
+                                                                the first and second participating user devices at the
+                                                                same time. A display system
+                                                                causes
+                                                                the user devices in the communal session to
+                                                                simultaneously display multiple screens at
+                                                                the
+                                                                same time.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header">
+                                                            <button
+                                                                class="accordion-button collapsed d-flex justify-content-between align-items-center"
+                                                                type="button" data-bs-toggle="collapse"
+                                                                data-bs-target="#collapse8" aria-expanded="false">
+                                                                8- Establishing trust networks in a communal media
+                                                                session
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapse8" class="accordion-collapse collapse"
+                                                            data-bs-parent="#myAccordion">
+                                                            <div class="accordion-body">
+                                                                A trust network is formed in a communal media system
+                                                                connected to a streaming
+                                                                application and executed within the streaming
+                                                                application. Source location is received
+                                                                for
+                                                                multimedia content selected in the streaming application
+                                                                and transmitted to user devices
+                                                                participating in a communal session. During the communal
+                                                                session, offerings are
+                                                                presented
+                                                                to the user devices in the communal session and user
+                                                                data associated with user
+                                                                interactions with the offerings are obtained and
+                                                                analyzed. Information presented to the
+                                                                user devices in the communal session is optimized based
+                                                                on the user data. Delivery of
+                                                                the
+                                                                multimedia content and social media content generated on
+                                                                the user devices is
+                                                                synchronized. The multimedia content and the social
+                                                                media content are delivered to the
+                                                                user devices at the same time, without any noticeable
+                                                                lag time during receipt of the
+                                                                multimedia content and the social media content by the
+                                                                user devices.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link active" aria-current="page" href="#news">News</a>
+                                        </li>
+                                    </ul>
+                                    <div class="d-flex" role="search">
+                                        <a href="#contact" class="btn btn-primary" type="submit">Contact Sales</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="lg-container">
+                <div class="hero-body">
+                    <div class="content-col">
+                        <div class="content" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+                            <h1>
+                                See What I See.
+                                <span>
+                                    TM
+                                </span>
+                            </h1>
+                            <h6>
+                                Groopview is transforming how people connect, support, and create in real time from
+                                IRL live streaming to remote customer care.
+                            </h6>
+                            <ul class="custom-list">
+                                <li>
+                                    <p>
+                                        Dualy empowers users to instantly share real-time experiences through
+                                        dual-camera live streaming.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        Dualy’s built-in AI companion provides live insights, enhancing user
+                                        interaction and content creation.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        SWIS (See What I See) revolutionizes customer care and field support by
+                                        enabling remote visual assistance through multi-way video and annotation
+                                        tools.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        With AI-powered call summaries and sentiment analysis, SWIS boosts
+                                        operational efficiency and elevates customer experience.
+                                    </p>
+                                </li>
+                            </ul>
+                            <button class="explore-btn">
+                                <img class="b-1" src="assets/images/explore-icon-1.png" alt="">
+                                <img class="b-2" src="assets/images/explore-icon-2.png" alt="">
+                                Explore our Products
+                            </button>
+                            <div class="logos">
+                                <img src="assets/images/logo1.svg" class="logo" alt="">
+                                <img src="assets/images/logo2.svg" class="logo" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-col">
+                        <div class="banner" data-aos="fade-up" data-aos-offset="400" data-aos-delay="400">
+                            <img src="assets/images/hero.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero -->
+        <!-- about-us -->
+        <div class="about-us-section" id="about">
+            <div class="lg-container">
+                <div class="row">
+                    <div class="col-lg-5 order1" data-aos="fade-up" data-aos-offset="400" data-aos-delay="400">
+                        <div class="banner animated">
+                            <img src="assets/images/about.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-7 order2" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+                        <div class="about-content">
+                            <h1>
+                                <span>
+                                    About Us
+                                </span>
+                                <br>
+                                Welcome to Groopview Inc. 
+                            </h1>
+                            <h3>
+                                Revolutionizing Real-Time Remote Communication
+                            </h3>
+                            <p>
+                                <b>Groopview</b> is a pioneering technology company redefining how people connect,
+                                collaborate,
+                                and create—anytime, anywhere. Our mission is simple: to bridge the gap between virtual
+                                and real-world interaction through powerful, human-centered communication tools. Whether
+                                you're a creator sharing your world in real time or a business solving problems in the
+                                field, Groopview empowers you with immersive, AI-enhanced experiences that go far beyond
+                                traditional video.
+                            </p>
+                            <p>
+                                We are the creators of two industry-defining platforms: Dualy and SWIS (See What I See).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- about-us -->
+        <!-- live-streaming -->
+        <div class="live-streaming-section" id="dualy">
+            <div class="lg-container">
+                <div class="row">
+                    <div class="col-lg-7" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+                        <div class="content">
+                            <h2>
+                                DUALY - See What I See
+                            </h2>
+                            <h6>
+                                The Ultimate IRL Live Streaming App
+                            </h6>
+                            <p>
+                                Dualy is our direct-to-consumer mobile app designed for content creators, sports fans,
+                                travelers, and digital storytellers. With Dualy, you're not just going live — you're
+                                bringing others directly into your experience. Capture what you see with your rear
+                                camera, connect with friends via your front camera, and share real moments like never
+                                before.
+                            </p>
+                            <p>
+                                <b>
+                                    Key benefits:
+                                </b>
+                            </p>
+                            <ul class="custom-list">
+                                <li>
+                                    <p>
+                                        <b> Dual Camera Streaming</b> – Broadcast from both front and rear cameras
+                                        simultaneously.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b> Watch Together with Friends</b> – Invite up to 4 friends to view
+                                        synchronized content and video chat in real time in a live stream.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b> Ask Dualy AI</b> – Your in-app smart companion providing real-time stats,
+                                        facts, and object identification as you stream.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b> Session Recording & Highlights</b> – Save sessions to your profile or share
+                                        clips instantly.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b> IRL Friendly</b> – No bulky gear or camera operator required. Designed for
+                                        solo creators.
+                                    </p>
+                                </li>
+                            </ul>
+                            <p>
+                                Dualy is live now in the App Stores with Freemium access and powerful premium features
+                                at just $3.99/month or $35.99/year.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5" data-aos="fade-up" data-aos-offset="400" data-aos-delay="400">
+                        <div class="banner animated">
+                            <img src="assets/images/live.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- live-streaming -->
+        <!-- support -->
+        <div class="support-section" id="swis">
+            <div class="lg-container">
+                <div class="row">
+                    <div class="col-lg-6 order1" data-aos="fade-up" data-aos-offset="400" data-aos-delay="400">
+                        <div class="banner animated">
+                            <img src="assets/images/support.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order2" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+                        <div class="content">
+                            <h2>
+                                <span> SWIS – See What I See</span> for Customer Care & Field Support
+                            </h2>
+                            <h6>
+                                Smarter Remote Support. Real-Time Results.
+                            </h6>
+                            <p>
+                                SWIS is Groopview’s enterprise SaaS platform purpose-built for Customer Care and Field
+                                Support teams. With SWIS, agents and technicians can instantly "see what the customer
+                                sees," diagnose problems remotely, and resolve issues faster — all while reducing truck
+                                rolls, support calls, and downtime. 
+                            </p>
+                            <p>
+                                <b>
+                                    Key Features:
+                                </b>
+                            </p>
+                            <ul class="custom-list">
+                                <li>
+                                    <p>
+                                        <b>
+                                            Multi-Way Video Calling</b> – Bring in support agents, supervisors, or field
+                                        technicians simultaneously.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>
+                                            Dual Camera Sharing</b> – Support agents and users can activate both front
+                                        and rear
+                                        cameras for full visibility.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>
+                                            Snapshot & Annotation Tools</b> – Take real-time screenshots with on-screen
+                                        drawing
+                                        for remote diagnostics.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>
+                                            Image Library</b> – Access shared images and documents during support calls.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>
+                                            Gen-AI Call Summarization</b> – AI-powered summaries and sentiment analysis
+                                        after
+                                        every session.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>
+                                            CPE & CRM Integration</b> – Sync SWIS with backend systems for seamless case
+                                        resolution and tracking.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>
+                                            Call Recording & Analysis</b> – Review and improve agent performance with
+                                        recorded
+                                        sessions.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>
+                                            Client Portal</b> – Central hub for analytics, data capture, and performance
+                                        review.
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>
+                                        <b>
+                                            Transfer Control</b> – Let agents pass visual control to teammates or
+                                        specialists.
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- support -->
+        <!-- news -->
+        <div class="news-section" id="news">
+            <div class="lg-container">
+                <div class="center-heading" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+                    <h2>
+                        <span>
+                            News
+                        </span>
+                    </h2>
+                    <p>
+                        Explore the Latest News, Product Launches, and Key Announcements from Our Team
+                    </p>
+                </div>
+                <div class="news-slider" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="news-card" style="background-image: url(assets/images/news2.jpg);">
+                                <div class="card-layer">
+                                    <a href="blog-detail.html">
+                                        <div class="heading">
+                                            <h3>
+                                                Groopview Unveils SWIS: AI for Smarter Support
+                                            </h3>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        <p>
+                                            Philadelphia, PA – Groopview Inc. launches SWIS, an AI-powered dual-camera
+                                            tool
+                                            revolutionizing remote customer care and field operations.
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="news-card" style="background-image: url(assets/images/news2.jpg);">
+                                <div class="card-layer">
+                                    <a href="blog-detail.html">
+                                        <div class="heading">
+                                            <h3>
+                                                Groopview Unveils SWIS: AI for Smarter Support
+                                            </h3>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        <p>
+                                            Philadelphia, PA – Groopview Inc. launches SWIS, an AI-powered dual-camera
+                                            tool
+                                            revolutionizing remote customer care and field operations.
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="news-card" style="background-image: url(assets/images/news2.jpg);">
+                                <div class="card-layer">
+                                    <a href="blog-detail.html">
+                                        <div class="heading">
+                                            <h3>
+                                                Groopview Unveils SWIS: AI for Smarter Support
+                                            </h3>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        <p>
+                                            Philadelphia, PA – Groopview Inc. launches SWIS, an AI-powered dual-camera
+                                            tool
+                                            revolutionizing remote customer care and field operations.
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="news-card" style="background-image: url(assets/images/news2.jpg);">
+                                <div class="card-layer">
+                                    <a href="blog-detail.html">
+                                        <div class="heading">
+                                            <h3>
+                                                Groopview Unveils SWIS: AI for Smarter Support
+                                            </h3>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </div>
+                                        <p>
+                                            Philadelphia, PA – Groopview Inc. launches SWIS, an AI-powered dual-camera
+                                            tool
+                                            revolutionizing remote customer care and field operations.
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- news -->
+        <!-- get-in-touch -->
+        <div class="get-in-touch-section" id="contact">
+            <img src="assets/images/mockup.png" class="mockup" alt="">
+            <div class="lg-container">
+                <div class="row">
+                    <div class="col-lg-7" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+                        <form action="">
+                            <div class="form-card">
+                                <h2>
+                                    Get In Touch
+                                </h2>
+                                <input type="text" class="form-control" placeholder="Your Name">
+                                <input type="text" class="form-control" placeholder="Email address">
+                                <input type="text" class="form-control" placeholder="Phone Number">
+                                <textarea name="" class="form-control" rows="7" placeholder="Write a message"
+                                    id=""></textarea>
+                                <button class="btn btn-dark">Contact Us</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- get-in-touch -->
+        <!-- subscribe -->
+        <div class="subscribe-section">
+            <div class="lg-container">
+                <div class="subscribe-card" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200">
+                    <div class="text">
+                        <p>
+                            Stay updated with our latest news and offers
+                        </p>
+                        <h1>
+                            Subscribe To Our
+                            Newsletters
+                        </h1>
+                    </div>
+                    <div class="send-email">
+                        <div class="input-group">
+                            <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+                            <input type="email" class="form-control" placeholder="Enter Your Email">
+                        </div>
+                        <button class="btn btn-light">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- subscribe -->
+        <!-- footer -->
+        <div class="footer">
+            <div class="lg-container">
+                <div class="footer-content">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="f-logo">
+                                <img src="assets/images/logo.svg" alt="">
+                            </div>
+                            <div class="social">
+                                <a href="">
+                                    <svg width="35" height="27" viewBox="0 0 35 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M35 3.17647C33.7118 3.73235 32.3231 4.09765 30.8843 4.27235C32.3566 3.43059 33.4943 2.09647 34.0296 0.492353C32.641 1.28647 31.1018 1.84235 29.479 2.16C28.1573 0.794118 26.3002 0 24.1922 0C20.2605 0 17.0483 3.04941 17.0483 6.81353C17.0483 7.35353 17.1152 7.87765 17.2323 8.37C11.2763 8.08412 5.97275 5.36824 2.44264 1.25471C1.82361 2.25529 1.47228 3.43059 1.47228 4.66941C1.47228 7.03588 2.72706 9.13235 4.66778 10.3235C3.47992 10.3235 2.37572 10.0059 1.40535 9.52941V9.57706C1.40535 12.8806 3.88145 15.6441 7.16061 16.2635C6.108 16.5382 5.00245 16.5763 3.93164 16.3747C4.38605 17.7286 5.27599 18.9134 6.47637 19.7623C7.67674 20.6112 9.12718 21.0817 10.6238 21.1076C8.08692 23.0143 4.94218 24.0449 1.7065 24.03C1.13767 24.03 0.568834 23.9982 0 23.9347C3.17878 25.8724 6.95985 27 11.0086 27C24.1922 27 31.4364 16.6129 31.4364 7.60765C31.4364 7.30588 31.4364 7.02 31.4197 6.71823C32.825 5.76529 34.0296 4.55824 35 3.17647Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                                <a href="">
+                                    <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M27 13.5338C27 6.06316 20.952 0 13.5 0C6.048 0 0 6.06316 0 13.5338C0 20.0842 4.644 25.5383 10.8 26.797V17.594H8.1V13.5338H10.8V10.1504C10.8 7.53835 12.9195 5.41353 15.525 5.41353H18.9V9.47368H16.2C15.4575 9.47368 14.85 10.0827 14.85 10.8271V13.5338H18.9V17.594H14.85V27C21.6675 26.3233 27 20.5579 27 13.5338Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                                <a href="">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19.7757 0C21.7929 0 23.7275 0.801346 25.1539 2.22775C26.5803 3.65416 27.3817 5.58878 27.3817 7.60602V19.7757C27.3817 21.7929 26.5803 23.7275 25.1539 25.1539C23.7275 26.5803 21.7929 27.3817 19.7757 27.3817H7.60602C5.58878 27.3817 3.65416 26.5803 2.22775 25.1539C0.801346 23.7275 0 21.7929 0 19.7757V7.60602C0 5.58878 0.801346 3.65416 2.22775 2.22775C3.65416 0.801346 5.58878 0 7.60602 0H19.7757ZM13.6908 7.60602C12.077 7.60602 10.5293 8.2471 9.38822 9.38822C8.2471 10.5293 7.60602 12.077 7.60602 13.6908C7.60602 15.3046 8.2471 16.8523 9.38822 17.9935C10.5293 19.1346 12.077 19.7757 13.6908 19.7757C15.3046 19.7757 16.8523 19.1346 17.9935 17.9935C19.1346 16.8523 19.7757 15.3046 19.7757 13.6908C19.7757 12.077 19.1346 10.5293 17.9935 9.38822C16.8523 8.2471 15.3046 7.60602 13.6908 7.60602ZM13.6908 10.6484C14.4977 10.6484 15.2716 10.969 15.8421 11.5395C16.4127 12.1101 16.7332 12.8839 16.7332 13.6908C16.7332 14.4977 16.4127 15.2716 15.8421 15.8421C15.2716 16.4127 14.4977 16.7332 13.6908 16.7332C12.8839 16.7332 12.1101 16.4127 11.5395 15.8421C10.969 15.2716 10.6484 14.4977 10.6484 13.6908C10.6484 12.8839 10.969 12.1101 11.5395 11.5395C12.1101 10.969 12.8839 10.6484 13.6908 10.6484ZM20.5363 5.32422C20.1328 5.32422 19.7459 5.48449 19.4606 5.76977C19.1753 6.05505 19.0151 6.44197 19.0151 6.84542C19.0151 7.24887 19.1753 7.63579 19.4606 7.92107C19.7459 8.20636 20.1328 8.36662 20.5363 8.36662C20.9397 8.36662 21.3266 8.20636 21.6119 7.92107C21.8972 7.63579 22.0575 7.24887 22.0575 6.84542C22.0575 6.44197 21.8972 6.05505 21.6119 5.76977C21.3266 5.48449 20.9397 5.32422 20.5363 5.32422Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                                <a href="">
+                                    <svg width="28" height="27" viewBox="0 0 28 27" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M22.8809 0C24.0743 0 25.2189 0.474106 26.0628 1.31802C26.9068 2.16193 27.3809 3.30653 27.3809 4.5V22.5C27.3809 23.6935 26.9068 24.8381 26.0628 25.682C25.2189 26.5259 24.0743 27 22.8809 27H4.88086C3.68739 27 2.54279 26.5259 1.69888 25.682C0.854965 24.8381 0.380859 23.6935 0.380859 22.5V4.5C0.380859 3.30653 0.854965 2.16193 1.69888 1.31802C2.54279 0.474106 3.68739 0 4.88086 0H22.8809ZM7.88086 10.5C7.48303 10.5 7.1015 10.658 6.8202 10.9393C6.5389 11.2206 6.38086 11.6022 6.38086 12V19.5C6.38086 19.8978 6.5389 20.2794 6.8202 20.5607C7.1015 20.842 7.48303 21 7.88086 21C8.27868 21 8.66021 20.842 8.94152 20.5607C9.22282 20.2794 9.38086 19.8978 9.38086 19.5V12C9.38086 11.6022 9.22282 11.2206 8.94152 10.9393C8.66021 10.658 8.27868 10.5 7.88086 10.5ZM12.3809 9C11.983 9 11.6015 9.15804 11.3202 9.43934C11.0389 9.72064 10.8809 10.1022 10.8809 10.5V19.5C10.8809 19.8978 11.0389 20.2794 11.3202 20.5607C11.6015 20.842 11.983 21 12.3809 21C12.7787 21 13.1602 20.842 13.4415 20.5607C13.7228 20.2794 13.8809 19.8978 13.8809 19.5V14.01C14.3384 13.494 15.1109 12.888 15.9704 12.5205C16.4699 12.3075 17.2214 12.2205 17.7434 12.3855C17.9165 12.4294 18.0708 12.5284 18.1829 12.6675C18.2609 12.7725 18.3809 13.0065 18.3809 13.5V19.5C18.3809 19.8978 18.5389 20.2794 18.8202 20.5607C19.1015 20.842 19.483 21 19.8809 21C20.2787 21 20.6602 20.842 20.9415 20.5607C21.2228 20.2794 21.3809 19.8978 21.3809 19.5V13.5C21.3809 12.495 21.1259 11.601 20.5949 10.884C20.1062 10.2338 19.4224 9.75709 18.6434 9.5235C17.2904 9.099 15.7919 9.3345 14.7914 9.7635C14.4711 9.90127 14.159 10.0575 13.8569 10.2315C13.794 9.88588 13.6118 9.5733 13.3421 9.34824C13.0723 9.12319 12.7322 8.99995 12.3809 9ZM7.88086 6C7.48303 6 7.1015 6.15804 6.8202 6.43934C6.5389 6.72064 6.38086 7.10218 6.38086 7.5C6.38086 7.89782 6.5389 8.27936 6.8202 8.56066C7.1015 8.84196 7.48303 9 7.88086 9C8.27868 9 8.66021 8.84196 8.94152 8.56066C9.22282 8.27936 9.38086 7.89782 9.38086 7.5C9.38086 7.10218 9.22282 6.72064 8.94152 6.43934C8.66021 6.15804 8.27868 6 7.88086 6Z"
+                                            fill="white" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#dualy" class="nav-link">Product</a>
+                                    </li>
+                                    <li>
+                                        <a href="#about" class="nav-link">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="#swis" class="nav-link">swis For Business</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="f-nav">
+                                <ul>
+                                    <li>
+                                        <a href="#news" class="nav-link">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="#contact" class="nav-link">Contact Sales</a>
+                                    </li>
+                                    <li>
+                                        <a href="#contact" class="nav-link">Help Center</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>
+                    © 2025 Groopview, Inc.
+                </p>
+            </div>
+        </div>
+        <!-- footer -->
+
+    </div>
+
+    <link href="assets/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/css/owl.theme.default.min.css" rel="stylesheet">
+    <script src="assets/css/jquery.min.js"></script>
+    <script src="assets/css/owl.carousel.min.js"></script>
+    <script src="assets/css/script.js"></script>
+
+</body>
+
+</html>
