@@ -23,7 +23,7 @@ try {
         }
 
         $to = 'info@groopview.com'; 
-        $subject = 'Contact Form Submission';
+        $subject = 'Contact Request from Groopview';
         $emailMessage = "Name: $name\nEmail: $email\nTel: $tel\nMessage: $message";
         $headers = 'From: no-reply@groopview.com' . "\r\n" .
                    'Reply-To: ' . $email . "\r\n" .
