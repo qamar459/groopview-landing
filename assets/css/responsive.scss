@@ -186,6 +186,11 @@
     .get-in-touch-section {
         padding: 60px 0px;
     }
+
+    .subscribe-section .subscribe-card form .send-email {
+        width: 100%;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -463,6 +468,20 @@
 
         li p {
             margin-bottom: 15px;
+        }
+    }
+
+    .subscribe-section .subscribe-card form .send-email {
+        border-radius: 20px;
+        padding: 22px;
+
+        .input-group,
+        .form-control {
+            width: 100%;
+        }
+
+        .btn-light {
+            width: 100%;
         }
     }
 }
