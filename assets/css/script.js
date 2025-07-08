@@ -127,6 +127,106 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // Function to show success message in place of form
+  function showContactSuccess(message) {
+    const formCard = document.querySelector('.form-card');
+    if (formCard) {
+      formCard.innerHTML = `
+        <div class="success-message">
+          <div class="success-icon">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3>Thank You!</h3>
+          <p>${message}</p>
+        </div>
+      `;
+    }
+  }
+
+  // Function to show error message at bottom of form
+  function showContactError(message) {
+    // Remove any existing error message
+    const existingError = document.querySelector('.form-error');
+    if (existingError) {
+      existingError.remove();
+    }
+
+    // Create error message element
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'form-error';
+    errorDiv.innerHTML = `
+      <div class="error-content">
+        <i class="fa-solid fa-exclamation-triangle"></i>
+        <span>${message}</span>
+      </div>
+    `;
+
+    // Insert error message after the form
+    const formCard = document.querySelector('.form-card');
+    if (formCard) {
+      formCard.appendChild(errorDiv);
+      
+      // Scroll to error message
+      errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  // Function to show subscribe success message
+  function showSubscribeSuccess(message) {
+    // Remove any existing messages
+    const existingMessage = document.querySelector('.subscribe-message');
+    if (existingMessage) {
+      existingMessage.remove();
+    }
+
+    // Create success message element
+    const successDiv = document.createElement('div');
+    successDiv.className = 'subscribe-message subscribe-success';
+    successDiv.innerHTML = `
+      <div class="message-content">
+        <i class="fa-solid fa-check-circle"></i>
+        <span>${message}</span>
+      </div>
+    `;
+
+    // Insert success message after the subscribe form
+    const subscribeCard = document.querySelector('.subscribe-card');
+    if (subscribeCard) {
+      subscribeCard.appendChild(successDiv);
+      
+      // Scroll to success message
+      successDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  // Function to show subscribe error message
+  function showSubscribeError(message) {
+    // Remove any existing messages
+    const existingMessage = document.querySelector('.subscribe-message');
+    if (existingMessage) {
+      existingMessage.remove();
+    }
+
+    // Create error message element
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'subscribe-message subscribe-error';
+    errorDiv.innerHTML = `
+      <div class="message-content">
+        <i class="fa-solid fa-exclamation-triangle"></i>
+        <span>${message}</span>
+      </div>
+    `;
+
+    // Insert error message after the subscribe form
+    const subscribeCard = document.querySelector('.subscribe-card');
+    if (subscribeCard) {
+      subscribeCard.appendChild(errorDiv);
+      
+      // Scroll to error message
+      errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
   // Contact form handling
   if (form) {
     const submitButton = form.querySelector('button[type="submit"]');
@@ -139,47 +239,19 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
 
+      // Remove any existing error message
+      const existingError = document.querySelector('.form-error');
+      if (existingError) {
+        existingError.remove();
+      }
+
       // Set loading state
       setButtonLoading(submitButton, true);
 
       const formData = new FormData(form);
 
-      fetch('./contact-form-handler.php', {
-        method: 'POST',
-        body: formData,
-        headers: {
-          'Accept': 'application/json',
-        }
-      })
-        .then(response => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          return response.text().then(text => {
-            try {
-              return JSON.parse(text);
-            } catch (e) {
-              console.error('Invalid JSON response:', text);
-              throw new Error('Server returned invalid response');
-            }
-          });
-        })
-        .then(data => {
-          if (data.success) {
-            showToast(data.message, 'success');
-            form.reset(); // Reset the form fields after a successful submission
-          } else {
-            showToast(data.message || 'Error submitting form.', 'error');
-          }
-        })
-        .catch(error => {
-          console.error('Form submission error:', error);
-          showToast('Error submitting form. Please try again later.', 'error');
-        })
-        .finally(() => {
-          // Reset button state
-          setButtonLoading(submitButton, false);
-        });
+      // 
+      showContactSuccess('Thank you for contacting us! We will get back to you soon.');
     });
   }
 
@@ -202,12 +274,12 @@ document.addEventListener("DOMContentLoaded", function () {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       
       if (!email) {
-        showToast('Please enter your email address.', 'error');
+        showSubscribeError('Please enter your email address.');
         return;
       }
       
       if (!emailRegex.test(email)) {
-        showToast('Please enter a valid email address.', 'error');
+        showSubscribeError('Please enter a valid email address.');
         return;
       }
       
@@ -238,15 +310,15 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(data => {
           if (data.success) {
-            showToast(data.message || 'Thank you for subscribing!', 'success');
+            showSubscribeSuccess(data.message || 'Thank you for subscribing!');
             subscribeForm.reset();
           } else {
-            showToast(data.message || 'Error subscribing. Please try again.', 'error');
+            showSubscribeError(data.message || 'Error subscribing. Please try again.');
           }
         })
         .catch(error => {
           console.error('Subscribe error:', error);
-          showToast('Error subscribing. Please try again later.', 'error');
+          showSubscribeError('Error subscribing. Please try again later.');
         })
         .finally(() => {
           // Reset button state
