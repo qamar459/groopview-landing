@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     // Insert success message after the subscribe form
-    const subscribeCard = document.querySelector('.subscribe-card');
+    const subscribeCard = document.querySelector('.subscribe-form');
     if (subscribeCard) {
       subscribeCard.appendChild(successDiv);
       
@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     // Insert error message after the subscribe form
-    const subscribeCard = document.querySelector('.subscribe-card');
+    const subscribeCard = document.querySelector('.subscribe-form');
     if (subscribeCard) {
       subscribeCard.appendChild(errorDiv);
       

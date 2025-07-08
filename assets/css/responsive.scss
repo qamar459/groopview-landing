@@ -79,7 +79,7 @@
     }
 
     .subscribe-section .subscribe-card {
-        padding: 60px 40px;
+        padding: 60px 40px 80px;
     }
 
 }
@@ -278,6 +278,36 @@
     .header-row.active .dropdown-menu {
         margin-top: 0px !important;
     }
+
+    .subscribe-section .subscribe-card .send-email {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .subscribe-section .subscribe-card .subscribe-form .send-email .btn-light,
+    .subscribe-section .subscribe-card .subscribe-form .send-email .input-group,
+    .subscribe-section .subscribe-card .send-email .input-group {
+        width: 100%;
+    }
+
+    .subscribe-section .subscribe-card .subscribe-form .send-email {
+        border-radius: 20px;
+        padding: 22px;
+        
+    }
+    .subscribe-section .subscribe-card {
+        padding: 40px 20px 20px;
+    }
+    .subscribe-message {
+        position: relative;
+        top: auto;
+        bottom: auto;
+        margin-top: 15px;
+    }
+    .subscribe-section .subscribe-card .text h1 {
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -354,24 +384,6 @@
         padding: 30px;
     }
 
-    .subscribe-section .subscribe-card .send-email {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .subscribe-section .subscribe-card .send-email .input-group {
-        width: 100%;
-    }
-
-    .subscribe-section .subscribe-card .send-email {
-        padding: 20px;
-        border-radius: 20px;
-    }
-
-    .subscribe-section .subscribe-card {
-        padding: 30px;
-        border-radius: 20px;
-    }
 
     .subscribe-section .subscribe-card .text h1 {
         text-align: center;

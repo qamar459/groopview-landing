@@ -827,7 +827,7 @@ html {
         justify-content: space-between;
 
         .text {
-            width: 50%;
+            width: 300px;
 
             p {
                 font-family: 'Roboto';
@@ -849,15 +849,17 @@ html {
             }
         }
 
-        form {
+        .subscribe-form {
             width: 100%;
+            max-width: 500px;
             display: flex;
+            align-items: flex-end;
+            position: relative;
             justify-content: flex-end;
-            align-items: center;
-            gap: 20px;
+            flex-direction: column;
 
             .send-email {
-                width: 70%;
+                width: 100%;
                 background: linear-gradient(90deg, #1F529B 0%, #153767 100%);
                 border-radius: 48.5px;
                 padding: 22px 36px;
@@ -890,6 +892,21 @@ html {
                         font-size: 18px;
                         color: #FFFFFF;
                         border: none;
+                    }
+
+                    .form-control:focus,
+                    .form-control:active,
+                    textarea:focus,
+                    textarea:active {
+                        background-color: transparent !important;
+                        outline: none !important;
+                        border-color: transparent !important;
+                    }
+
+                    .form-control:-webkit-autofill {
+                        -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+                        -webkit-text-fill-color: #ffffff;
+                        transition: background-color 9999s ease-in-out 0s;
                     }
 
                     .form-control::placeholder {
@@ -1326,16 +1343,16 @@ html {
 .btn {
     position: relative;
     transition: all 0.3s ease;
-    
+
     &.loading {
         cursor: not-allowed;
         opacity: 0.7;
-        
+
         &:hover {
             transform: none;
         }
     }
-    
+
     .spinner {
         display: inline-block;
         width: 16px;
@@ -1353,6 +1370,7 @@ html {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -1457,6 +1475,7 @@ html {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1468,6 +1487,7 @@ html {
         opacity: 0;
         transform: scale(0.5);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -1479,6 +1499,7 @@ html {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -1487,9 +1508,13 @@ html {
 
 // Subscribe Form Messages
 .subscribe-message {
-    margin-top: 20px;
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    right: 0;
+    width: 100%;
     padding: 15px 20px;
-    border-radius: 8px;
+    border-radius: 100px;
     animation: slideInUp 0.4s ease-out;
 
     .message-content {
@@ -1531,6 +1556,7 @@ html {
         border: 1px solid #f5c6cb;
 
         .message-content {
+
             i {
                 color: #dc3545;
             }
