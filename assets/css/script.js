@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const formData = new FormData(form);
 
-      fetch('contact-form-handler.php', {
+      fetch('../../contact-form-handler.php', {
         method: 'POST',
         body: formData,
         headers: {
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       const formData = new FormData(subscribeForm);
       
-      fetch('subscribe-handler.php', {
+      fetch('../../subscribe-handler.php', {
         method: 'POST',
         body: formData,
         headers: {
