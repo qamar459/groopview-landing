@@ -114,10 +114,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 20000);
   }
 
+  // Function to set button loading state
+  function setButtonLoading(button, isLoading) {
+    if (isLoading) {
+      button.disabled = true;
+      button.innerHTML = '<span class="spinner"></span> Sending...';
+      button.classList.add('loading');
+    } else {
+      button.disabled = false;
+      button.innerHTML = button.getAttribute('data-original-text') || 'Contact Us';
+      button.classList.remove('loading');
+    }
+  }
+
   // Contact form handling
   if (form) {
+    const submitButton = form.querySelector('button[type="submit"]');
+    
+    // Store original button text
+    if (submitButton) {
+      submitButton.setAttribute('data-original-text', submitButton.innerHTML);
+    }
+
     form.addEventListener('submit', function (event) {
       event.preventDefault();
+
+      // Set loading state
+      setButtonLoading(submitButton, true);
 
       const formData = new FormData(form);
 
@@ -152,6 +175,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => {
           console.error('Form submission error:', error);
           showToast('Error submitting form. Please try again later.', 'error');
+        })
+        .finally(() => {
+          // Reset button state
+          setButtonLoading(submitButton, false);
         });
     });
   }
@@ -159,6 +186,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Subscribe form handling
   const subscribeForm = document.getElementById('subscribe-form');
   if (subscribeForm) {
+    const subscribeButton = subscribeForm.querySelector('button[type="submit"]');
+    
+    // Store original button text
+    if (subscribeButton) {
+      subscribeButton.setAttribute('data-original-text', subscribeButton.innerHTML);
+    }
+
     subscribeForm.addEventListener('submit', function (event) {
       event.preventDefault();
 
@@ -176,6 +210,9 @@ document.addEventListener("DOMContentLoaded", function () {
         showToast('Please enter a valid email address.', 'error');
         return;
       }
+      
+      // Set loading state
+      setButtonLoading(subscribeButton, true);
       
       const formData = new FormData(subscribeForm);
       
@@ -210,6 +247,10 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => {
           console.error('Subscribe error:', error);
           showToast('Error subscribing. Please try again later.', 'error');
+        })
+        .finally(() => {
+          // Reset button state
+          setButtonLoading(subscribeButton, false);
         });
       
     });
